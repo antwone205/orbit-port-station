@@ -1,0 +1,12 @@
+{
+  "workspace": "Antwone's Affiliate Station",
+  "island": "orbit-port",
+  "timezone": "America/Guyana",
+  "lead": {"id": "jev", "name": "Jev Router", "role": "routes and approves work", "color": "#ffffff", "schedule": "on demand"},
+  "bots": [
+    {"id": "star-bot", "name": "Star Bot Grok", "role": "Amazon product research & content", "color": "#f5c518", "schedule": "on demand"},
+    {"id": "pin-pro", "name": "Pin Perfect Pro", "role": "Pinterest pin creation", "color": "#ff4d8d", "schedule": "on demand"},
+    {"id": "infographic", "name": "Infographic Designer", "role": "product infographics", "color": "#4d8dff", "schedule": "on demand"}
+  ],
+  "source": {"mode": "live", "url": "https://sijejikqkhkgwhapwvvo.supabase.co/rest/v1/events", "anon_key": "sb_publishable_PVdEKOeFkNaEMtpchysGBQ_dC_y7vog"}
+}
