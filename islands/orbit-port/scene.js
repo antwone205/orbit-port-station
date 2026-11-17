@@ -301,6 +301,10 @@ function livingPort(stage, ships, { rackCount, bayAt }) {
   stage.particles({ count: 620, center: starAt, box: [240, 150, 34], velocity: [-0.09, 0.014, 0], size: [0.09, 0.2], color: '#d6e4ff', additive: true, opacity: 1, hard: 1.1, flicker: 0.6, order: 2 });
   stage.particles({ count: 30, center: starAt, box: [240, 150, 34], velocity: [-0.09, 0.014, 0], size: [0.16, 0.22], color: '#fff2dc', additive: true, opacity: 1, hard: 1.0, flicker: 0.85, order: 2 });
 
+  // ---------- a little snow, drifting down past the station: light and soft, a few big faint flakes up close ----------
+  stage.particles({ count: 300, center: atNdc(0, 0, 30), box: [70, 40, 30], velocity: [0.35, -0.75, 0.1], size: [0.07, 0.13], wobble: 0.6, color: [1.4, 1.46, 1.6], opacity: 0.85, hard: 2.0, order: 19 });
+  stage.particles({ count: 80, center: atNdc(0, 0, 16), box: [36, 22, 12], velocity: [0.45, -0.9, 0.1], size: [0.09, 0.16], wobble: 0.9, color: [1.25, 1.3, 1.42], opacity: 0.45, hard: 2.8, order: 19 });
+
   // ---------- the planet ----------
   // Where the look script put it, from the camera: the same numbers, in three.js axes.
   const beta = THREE.MathUtils.degToRad(66.3);
