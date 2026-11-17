@@ -292,7 +292,7 @@
 .gi-card {
   width: 100%;
   max-width: 560px;
-  max-height: calc(100vh - 2 * var(--gi-gutter));
+  max-height: calc(100% - 2 * var(--gi-gutter));
   overflow: auto;
   padding: 20px;
   user-select: text;

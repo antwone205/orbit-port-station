@@ -93,7 +93,7 @@ async function boot() {
   renderer.shadowMap.enabled = quality.shadows;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-  const size = () => [window.innerWidth, window.innerHeight];
+  const size = () => [canvas.clientWidth || window.innerWidth, canvas.clientHeight || window.innerHeight];
   const [w0, h0] = size();
   renderer.setSize(w0, h0, false);
 
@@ -185,7 +185,7 @@ async function boot() {
     renderer,
     quality,
     canAdapt: qualitySource === 'auto' && !params.get('dpr'),
-    onResolutionChange: () => island.resize?.(window.innerWidth, window.innerHeight),
+    onResolutionChange: () => island.resize?.(...size()),
   });
 
   // Daylight.

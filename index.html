@@ -6,8 +6,11 @@
     <meta name="theme-color" content="#0b0d12" />
     <title>Grok Bot Worlds</title>
     <style>
-      html, body { margin: 0; height: 100%; background: #0b0d12; overflow: hidden; }
-      #gi-canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+      html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+      /* Locked 16:9 widescreen frame, centered with black bars, like a YouTube video. */
+      #gi-canvas, #gi-ui { position: fixed !important; inset: 0 !important; margin: auto !important;
+        width: min(100vw, calc(100dvh * 16 / 9)) !important; height: min(100dvh, calc(100vw * 9 / 16)) !important; }
+      #gi-canvas { display: block; touch-action: none; }
     </style>
     <script>
       // Capture mode: time, frames and random come only from window.__capture, stepped by tools/record.mjs.
